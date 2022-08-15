@@ -1,21 +1,5 @@
+@import 'variable';
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
-
-$primary-bg: #f2ebe3;
-$primary-bg-component: #fff;
-
-$primary-text-color: #1c232b;
-$secondary-text-color: #6c7289;
-
-$highlight-color: #3c8067;
-$highlight-color-hover: darken($highlight-color, 20%);
-
-$radius: 0.5em;
-
-$font-Montserrat: 'Montserrat', sans-serif;
-$font-fraunces: 'Fraunces', serif;
-
-$weight-bold: 700;
-$weight-medium: 500;
 
 *,
 *::after,
@@ -24,7 +8,7 @@ $weight-medium: 500;
 }
 
 body {
-  background-color: $primary-bg;
+  background-color: $bg-primary;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -34,13 +18,13 @@ body {
 
 .card {
   width: 90%;
-  background-color: $primary-bg-component;
+  background-color: $bg-secondary;
   border-radius: $radius;
   font-family: $font-Montserrat;
-  font-size: 14px;
-  color: $primary-text-color;
+  font-size: $font-size-medium;
+  color: $text-color-primary;
 
-  &__img {
+  & > &__img {
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -48,33 +32,63 @@ body {
     border-radius: $radius $radius 0 0;
   }
 
-  &__content {
+  & > &__content {
     padding: 1.5em;
     padding-top: 0;
-  }
-  & > &__title {
-    line-height: 1;
-    font-family: $font-fraunces;
-  }
 
-  & > &__paragraph {
-    font-weight: $weight-medium;
-    color: $secondary-text-color;
-  }
+    .card__title {
+      line-height: 1;
+      font-family: $font-fraunces;
+      position: relative;
 
-  & > &__price {
-    font-family: $font-fraunces;
-    color: $highlight-color;
-  }
+      &::before {
+        content: 'perfume';
+        position: absolute;
+        font-family: $font-Montserrat;
+        font-size: $font-size-medium;
+        left: 0;
+        top: -1em;
+        color: $text-color-secondary;
+        text-transform: uppercase;
+      }
+    }
 
-  & > &__btn {
-    width: 100%;
-    height: 3em;
-    text-align: center;
-    font-weight: $weight-bold;
-    border: none;
-    background-color: $highlight-color;
-    color: #fff;
-    border-radius: $radius;
+    .card__paragraph {
+      font-weight: $font-weight-medium;
+      color: $text-color-secondary;
+    }
+
+    .card__price {
+      font-family: $font-fraunces;
+      color: $highlight-color;
+      position: relative;
+
+      &::after {
+        content: '$169.99';
+        font-family: $font-Montserrat;
+        color: $text-color-secondary;
+        position: absolute;
+        font-size: $font-size-medium;
+        font-weight: $font-weight-medium;
+        text-decoration-line: line-through;
+      }
+    }
+
+    .card__btn {
+      width: 100%;
+      height: 3em;
+      text-align: center;
+      font-weight: $font-weight-bold;
+      border: none;
+      background-color: $highlight-color;
+      color: $bg-secondary;
+      border-radius: $radius;
+
+      &::before {
+        content: 'testtest';
+        color: black;
+        font-size: $font-size-medium;
+      }
+    }
   }
 }
