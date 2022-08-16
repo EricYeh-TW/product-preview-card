@@ -17,11 +17,13 @@ body {
 }
 
 .card {
+  $c: &;
+
   width: 90%;
   background-color: $bg-secondary;
   border-radius: $radius;
 
-  & > &__img {
+  &__img {
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -29,36 +31,36 @@ body {
     border-radius: $radius $radius 0 0;
   }
 
-  & > &__content {
-    padding: 1.5em;
+  &__content {
+    padding: 20px;
     padding-top: 0;
 
-    .card__title {
-      line-height: 1;
-      font-family: $font-fraunces;
-      position: relative;
-
-      &::before {
-        content: 'perfume';
-        font-family: $font-Montserrat;
-        font-size: $font-size-small;
-        font-weight: $font-weight-medium;
-        position: absolute;
-        left: 0;
-        top: -1em;
-        color: $text-color-secondary;
-        text-transform: uppercase;
-      }
+    #{$c}__quote {
+      font-family: $font-Montserrat;
+      font-size: $font-size-small;
+      font-weight: $font-weight-medium;
+      letter-spacing: $font-spacing;
+      color: $text-color-secondary;
+      text-transform: uppercase;
+      display: inline-block;
+      margin-top: 20px;
     }
 
-    .card__paragraph {
+    #{$c}__title {
+      line-height: 1;
+      font-family: $font-fraunces;
+    }
+
+    #{$c}__paragraph {
       font-size: $font-size-medium;
       font-family: $font-Montserrat;
       font-weight: $font-weight-medium;
+      word-spacing: 1px;
+      line-height: 1.5;
       color: $text-color-secondary;
     }
 
-    .card__price {
+    #{$c}__price {
       font-family: $font-fraunces;
       color: $highlight-color;
 
@@ -69,15 +71,19 @@ body {
         font-weight: $font-weight-medium;
         color: $text-color-secondary;
         text-decoration-line: line-through;
-        vertical-align: middle;
+        vertical-align: 50%;
+        position: relative;
+        left: 20px;
       }
     }
 
-    .card__btn {
+    #{$c}__btn {
       width: 100%;
       height: 3em;
       text-align: center;
       font-weight: $font-weight-bold;
+      font-size: $font-size-medium;
+      font-family: $font-Montserrat;
       border: none;
       background-color: $highlight-color;
       color: $bg-secondary;

@@ -26,44 +26,44 @@ body {
   background-color: #fff;
   border-radius: 0.5em;
 }
-.card > .card__img {
+.card__img {
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   border-radius: 0.5em 0.5em 0 0;
 }
-.card > .card__content {
-  padding: 1.5em;
+.card__content {
+  padding: 20px;
   padding-top: 0;
 }
-.card > .card__content .card__title {
-  line-height: 1;
-  font-family: "Fraunces", serif;
-  position: relative;
-}
-.card > .card__content .card__title::before {
-  content: "perfume";
+.card__content .card__quote {
   font-family: "Montserrat", sans-serif;
   font-size: small;
   font-weight: 500;
-  position: absolute;
-  left: 0;
-  top: -1em;
+  letter-spacing: 0.5em;
   color: #6c7289;
   text-transform: uppercase;
+  display: inline-block;
+  margin-top: 20px;
 }
-.card > .card__content .card__paragraph {
+.card__content .card__title {
+  line-height: 1;
+  font-family: "Fraunces", serif;
+}
+.card__content .card__paragraph {
   font-size: 14px;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
+  word-spacing: 1px;
+  line-height: 1.5;
   color: #6c7289;
 }
-.card > .card__content .card__price {
+.card__content .card__price {
   font-family: "Fraunces", serif;
   color: #3c8067;
 }
-.card > .card__content .card__price::after {
+.card__content .card__price::after {
   content: "$169.99";
   font-family: "Montserrat", sans-serif;
   font-size: small;
@@ -71,19 +71,23 @@ body {
   color: #6c7289;
   -webkit-text-decoration-line: line-through;
           text-decoration-line: line-through;
-  vertical-align: middle;
+  vertical-align: 50%;
+  position: relative;
+  left: 20px;
 }
-.card > .card__content .card__btn {
+.card__content .card__btn {
   width: 100%;
   height: 3em;
   text-align: center;
   font-weight: 700;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
   border: none;
   background-color: #3c8067;
   color: #fff;
   border-radius: 0.5em;
 }
-.card > .card__content .card__btn::before {
+.card__content .card__btn::before {
   content: url(../images/icon-cart.svg);
   vertical-align: middle;
   position: relative;
