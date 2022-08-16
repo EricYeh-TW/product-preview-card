@@ -20,9 +20,6 @@ body {
   width: 90%;
   background-color: $bg-secondary;
   border-radius: $radius;
-  font-family: $font-Montserrat;
-  font-size: $font-size-medium;
-  color: $text-color-primary;
 
   & > &__img {
     width: 100%;
@@ -43,9 +40,10 @@ body {
 
       &::before {
         content: 'perfume';
-        position: absolute;
         font-family: $font-Montserrat;
-        font-size: $font-size-medium;
+        font-size: $font-size-small;
+        font-weight: $font-weight-medium;
+        position: absolute;
         left: 0;
         top: -1em;
         color: $text-color-secondary;
@@ -54,6 +52,8 @@ body {
     }
 
     .card__paragraph {
+      font-size: $font-size-medium;
+      font-family: $font-Montserrat;
       font-weight: $font-weight-medium;
       color: $text-color-secondary;
     }
@@ -61,16 +61,15 @@ body {
     .card__price {
       font-family: $font-fraunces;
       color: $highlight-color;
-      position: relative;
 
       &::after {
         content: '$169.99';
         font-family: $font-Montserrat;
-        color: $text-color-secondary;
-        position: absolute;
-        font-size: $font-size-medium;
+        font-size: $font-size-small;
         font-weight: $font-weight-medium;
+        color: $text-color-secondary;
         text-decoration-line: line-through;
+        vertical-align: middle;
       }
     }
 
@@ -85,9 +84,11 @@ body {
       border-radius: $radius;
 
       &::before {
-        content: 'testtest';
-        color: black;
-        font-size: $font-size-medium;
+        // content裡面可以直接放icon
+        content: url(../images/icon-cart.svg);
+        vertical-align: middle;
+        position: relative;
+        right: 12px;
       }
     }
   }

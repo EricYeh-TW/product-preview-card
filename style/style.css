@@ -25,9 +25,6 @@ body {
   width: 90%;
   background-color: #fff;
   border-radius: 0.5em;
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-  color: #1c232b;
 }
 .card > .card__img {
   width: 100%;
@@ -47,32 +44,34 @@ body {
 }
 .card > .card__content .card__title::before {
   content: "perfume";
-  position: absolute;
   font-family: "Montserrat", sans-serif;
-  font-size: 14px;
+  font-size: small;
+  font-weight: 500;
+  position: absolute;
   left: 0;
   top: -1em;
   color: #6c7289;
   text-transform: uppercase;
 }
 .card > .card__content .card__paragraph {
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   color: #6c7289;
 }
 .card > .card__content .card__price {
   font-family: "Fraunces", serif;
   color: #3c8067;
-  position: relative;
 }
 .card > .card__content .card__price::after {
   content: "$169.99";
   font-family: "Montserrat", sans-serif;
-  color: #6c7289;
-  position: absolute;
-  font-size: 14px;
+  font-size: small;
   font-weight: 500;
+  color: #6c7289;
   -webkit-text-decoration-line: line-through;
           text-decoration-line: line-through;
+  vertical-align: middle;
 }
 .card > .card__content .card__btn {
   width: 100%;
@@ -85,7 +84,8 @@ body {
   border-radius: 0.5em;
 }
 .card > .card__content .card__btn::before {
-  content: "testtest";
-  color: black;
-  font-size: 14px;
+  content: url(../images/icon-cart.svg);
+  vertical-align: middle;
+  position: relative;
+  right: 12px;
 }
