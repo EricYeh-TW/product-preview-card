@@ -6,8 +6,14 @@
           box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
-  background-color: #f2ebe3;
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
+  background-color: hsl(30deg, 38%, 92%);
   width: 100%;
   height: 100vh;
   display: -webkit-box;
@@ -24,40 +30,40 @@ body {
 .card {
   width: 90%;
   background-color: #fff;
-  border-radius: 0.5em;
+  border-radius: 0.8rem;
 }
 .card__img {
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  border-radius: 0.5em 0.5em 0 0;
+  border-radius: 0.8rem 0.8rem 0 0;
 }
 .card__content {
-  padding: 20px;
+  padding: 1.5rem;
   padding-top: 0;
 }
 .card__content .card__quote {
-  font-family: "Montserrat", sans-serif;
-  font-size: small;
+  font-size: 1.2rem;
   font-weight: 500;
-  letter-spacing: 0.5em;
   color: #6c7289;
+  letter-spacing: 0.4rem;
   text-transform: uppercase;
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 1.5rem;
 }
 .card__content .card__title {
   line-height: 1;
   font-family: "Fraunces", serif;
+  margin-top: 1.5rem;
 }
 .card__content .card__paragraph {
-  font-size: 14px;
-  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
   font-weight: 500;
   word-spacing: 1px;
   line-height: 1.5;
   color: #6c7289;
+  margin-top: 1.5rem;
 }
 .card__content .card__price {
   font-family: "Fraunces", serif;
@@ -65,31 +71,31 @@ body {
 }
 .card__content .card__price::after {
   content: "$169.99";
-  font-family: "Montserrat", sans-serif;
-  font-size: small;
+  font-size: 1.2rem;
   font-weight: 500;
+  font-family: "Montserrat", sans-serif;
   color: #6c7289;
   -webkit-text-decoration-line: line-through;
           text-decoration-line: line-through;
   vertical-align: 50%;
   position: relative;
-  left: 20px;
+  margin-left: 1.5rem;
 }
 .card__content .card__btn {
   width: 100%;
-  height: 3em;
+  height: 4.8rem;
   text-align: center;
-  font-weight: 700;
-  font-size: 14px;
-  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1.4rem;
   border: none;
   background-color: #3c8067;
   color: #fff;
-  border-radius: 0.5em;
+  border-radius: 0.8rem;
+  margin-bottom: 1rem;
 }
 .card__content .card__btn::before {
   content: url(../images/icon-cart.svg);
   vertical-align: middle;
   position: relative;
-  right: 12px;
+  margin-right: 1.2rem;
 }

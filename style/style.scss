@@ -7,8 +7,14 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
-  background-color: $bg-primary;
+  font-size: 1.6rem;
+  font-family: 'Montserrat', sans-serif;
+  background-color: hsl(30, 38%, 92%);
   width: 100%;
   height: 100vh;
   display: flex;
@@ -20,7 +26,7 @@ body {
   $c: &;
 
   width: 90%;
-  background-color: $bg-secondary;
+  background-color: #fff;
   border-radius: $radius;
 
   &__img {
@@ -32,69 +38,69 @@ body {
   }
 
   &__content {
-    padding: 20px;
+    padding: $padding;
     padding-top: 0;
 
     #{$c}__quote {
-      font-family: $font-Montserrat;
       font-size: $font-size-small;
       font-weight: $font-weight-medium;
-      letter-spacing: $font-spacing;
       color: $text-color-secondary;
+      letter-spacing: 0.4rem;
       text-transform: uppercase;
       display: inline-block;
-      margin-top: 20px;
+      margin-top: $padding;
     }
 
     #{$c}__title {
       line-height: 1;
-      font-family: $font-fraunces;
+      font-family: $font-title;
+      margin-top: $padding;
     }
 
     #{$c}__paragraph {
       font-size: $font-size-medium;
-      font-family: $font-Montserrat;
       font-weight: $font-weight-medium;
       word-spacing: 1px;
       line-height: 1.5;
       color: $text-color-secondary;
+      margin-top: $padding;
     }
 
     #{$c}__price {
-      font-family: $font-fraunces;
+      font-family: $font-title;
       color: $highlight-color;
 
       &::after {
         content: '$169.99';
-        font-family: $font-Montserrat;
         font-size: $font-size-small;
         font-weight: $font-weight-medium;
+        font-family: 'Montserrat', sans-serif;
         color: $text-color-secondary;
         text-decoration-line: line-through;
         vertical-align: 50%;
         position: relative;
-        left: 20px;
+        margin-left: $padding;
       }
     }
 
     #{$c}__btn {
       width: 100%;
-      height: 3em;
+      height: 4.8rem;
       text-align: center;
-      font-weight: $font-weight-bold;
+      font-weight: $font-weight-medium;
       font-size: $font-size-medium;
-      font-family: $font-Montserrat;
       border: none;
       background-color: $highlight-color;
-      color: $bg-secondary;
+      color: #fff;
       border-radius: $radius;
+      margin-bottom: 1rem;
 
       &::before {
         // content裡面可以直接放icon
         content: url(../images/icon-cart.svg);
         vertical-align: middle;
         position: relative;
-        right: 12px;
+        margin-right: 1.2rem;
       }
     }
   }
