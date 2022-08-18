@@ -42,16 +42,18 @@ body {
 
   &__img {
     width: 100%;
-    height: 100%;
+    height: 23.5rem;
     background-image: url(../images/image-product-mobile.jpg);
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
     background-position: center;
     border-radius: $radius $radius 0 0;
 
     @include respond(laptop) {
       width: 50%;
+      height: 100%;
       border-radius: $radius * 2 0 0 $radius * 2;
+      background-image: url(../images/image-product-desktop.jpg);
     }
   }
 
@@ -66,12 +68,13 @@ body {
       letter-spacing: 0.4rem;
       text-transform: uppercase;
       display: inline-block;
-      margin-top: $padding;
+      margin-top: 22px;
     }
 
     #{$c}__title {
       line-height: 1;
       font-family: $font-title;
+      margin: 0;
       margin-top: $padding;
     }
 
