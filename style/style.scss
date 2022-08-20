@@ -33,23 +33,24 @@ body {
   display: flex;
   flex-direction: column;
 
-  @include respond(laptop) {
+  @include respond(phone) {
     width: 50%;
-    height: 50%;
+    min-width: 50rem;
+    height: 55%;
     flex-direction: row;
     border-radius: $radius * 2;
   }
 
   &__img {
     width: 100%;
-    height: 23.5rem;
+    height: 24rem;
     background-image: url(../images/image-product-mobile.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     border-radius: $radius $radius 0 0;
 
-    @include respond(laptop) {
+    @include respond(phone) {
       width: 50%;
       height: 100%;
       border-radius: $radius * 2 0 0 $radius * 2;
@@ -61,6 +62,11 @@ body {
     padding: $padding;
     padding-top: 0;
 
+    @include respond(phone) {
+      width: 50%;
+      padding: clamp($padding, 0.045rem + 2.38vw, $padding-large);
+    }
+
     #{$c}__quote {
       font-size: $font-size-small;
       font-weight: $font-weight-medium;
@@ -68,7 +74,12 @@ body {
       letter-spacing: 0.4rem;
       text-transform: uppercase;
       display: inline-block;
-      margin-top: 22px;
+      margin-top: 2.2rem;
+
+      @include respond(phone) {
+        margin-top: 0;
+        font-size: clamp(1.2rem, 0.571rem + 0.48vw, 1.6rem);
+      }
     }
 
     #{$c}__title {
@@ -76,20 +87,38 @@ body {
       font-family: $font-title;
       margin: 0;
       margin-top: $padding;
+      font-size: $font-size-large;
+
+      @include respond(phone) {
+        font-size: clamp(2.4rem, 0.786rem + 1.9vw, 3.2rem);
+        margin-top: clamp(1.5rem, 0.1rem + 1.5vw, 3rem);
+        line-height: 0.9;
+      }
     }
 
     #{$c}__paragraph {
       font-size: $font-size-medium;
       font-weight: $font-weight-medium;
       word-spacing: 1px;
-      line-height: 1.5;
+      line-height: 1.6;
       color: $text-color-secondary;
       margin-top: $padding;
+
+      @include respond(phone) {
+        font-size: 1.6rem;
+        margin-top: clamp(1.5rem, 0.1rem + 1.5vw, 3rem);
+      }
     }
 
     #{$c}__price {
       font-family: $font-title;
       color: $highlight-color;
+
+      @include respond(phone) {
+        font-size: 3.6rem;
+        margin-top: clamp(2rem, 0.5rem + 1vw, 4rem);
+        margin-bottom: clamp(2rem, 0.5rem + 1vw, 4rem);
+      }
 
       &::after {
         content: '$169.99';
@@ -101,6 +130,10 @@ body {
         vertical-align: 50%;
         position: relative;
         margin-left: $padding;
+
+        @include respond(phone) {
+          font-size: $font-size-medium;
+        }
       }
     }
 
@@ -115,6 +148,13 @@ body {
       color: #fff;
       border-radius: $radius;
       margin-bottom: 1rem;
+      padding: 0;
+
+      @include respond(phone) {
+        height: 5.3rem;
+        font-size: 1.6rem;
+        font-weight: $font-weight-bold;
+      }
 
       &:hover {
         background-color: $highlight-color-hover;
