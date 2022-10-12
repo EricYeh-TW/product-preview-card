@@ -23,8 +23,7 @@ Users should be able to:
 
 ### Screenshot
 
-<img src="./mobile.jpg" alt="mobile" height="200px">
-<img src="./table.jpg" alt="table" height="200px">
+<img src="./mobile.jpg" alt="mobile" height="200px"> <img src="./table.jpg" alt="table" height="200px">
 
 ### Links
 
